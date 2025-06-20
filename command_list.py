@@ -1,4 +1,6 @@
-class PrintCommands():
+import random
+
+class Commands():
     
         def show_commands(self):
             print("\n Commands:")
@@ -15,3 +17,10 @@ class PrintCommands():
             for cmd, description in commands:
                 print(f"   {cmd.ljust(16)} - {description}") # type: ignore
             print()
+            
+        def beg(self):
+            amount = random.randint(1, 100)
+            self.wallet += amount
+            donators = ["a kind stranger", "a wizard", "Elon Musk", "an NPC", "Sara Duterte", "a dog", "Gelo Cruz"]
+            donor = random.choice(donators)
+            return f"{donor} gave you ${amount}..."
