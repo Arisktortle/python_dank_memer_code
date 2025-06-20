@@ -1,6 +1,8 @@
 import random
 
 class Commands():
+    def __init__(self, account):
+        self.account = account
     
         def show_commands(self):
             print("\n Commands:")
@@ -20,7 +22,7 @@ class Commands():
             
         def beg(self):
             amount = random.randint(1, 100)
-            self.wallet += amount
+            self.account.wallet += amount
             donators = ["a kind stranger", "a wizard", "Elon Musk", "an NPC", "Sara Duterte", "a dog", "Gelo Cruz"]
             donor = random.choice(donators)
             return f"{donor} gave you ${amount}..."
