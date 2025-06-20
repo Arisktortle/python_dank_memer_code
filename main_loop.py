@@ -27,5 +27,21 @@ class MainLoop:
         if os.path.exists(self.data_file):
             with open(self.data_file, 'r') as f:
                 return json.load(f)
+            
+    def command_list(self):
+        print("\n Commands:")
+        commands = [
+            ("help", "Shows the command list")
+            ("balance", "Show wallet and bank balance")
+            ("shop", "Show items available in the shop")
+            ("buy ITEMNAME", "Buy a specific item in the shop")
+            ("inventory", "Show your inventory")
+            ("bank deposit AMOUNT", "Deposit amount of money")
+            ("bank withdraw AMOUNT", "Withdraw amount of money")
+            ("blackjack", "Play blackjack game")
+        ]
+        for cmd, description in commands:
+            print(f"   {cmd.ljust(16)} ---> {desc}")
+        print()
     
             
