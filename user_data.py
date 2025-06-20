@@ -2,9 +2,8 @@ from dank_bank import Bank
 import os
 import json
 
-
 class UserData:
-    def data_manage(self, data_file="data.json"):
+    def __init__(self, data_file="data.json"):
         self.data_file = data_file
         
     def load_data(self):
