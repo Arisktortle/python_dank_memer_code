@@ -3,8 +3,9 @@ import os
 import json
 
 class UserData:
-    def __init__(self, data_file="data.json"):
-        self.data_file = data_file
+    def __init__(self, username):
+        self.username
+        self.data_file = f"data_{username}.json"
         
     def load_data(self):
         if not os.path.exists(self.data_file):
