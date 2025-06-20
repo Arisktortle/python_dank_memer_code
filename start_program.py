@@ -24,6 +24,7 @@ class StartProgram():
                     
                 elif command == "beg":
                     print(self.commands.beg())
+                    self.user_data.save(self.account)
                     
                 elif command == "exit":
                     self.user_data.save(self.account)
