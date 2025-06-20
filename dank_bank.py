@@ -9,6 +9,7 @@ class Bank:
             self.wallet = 1000
             self.bank = 0 
             self.inventory = []
+            self.cooldowns = {}
             
     def to_dict(self):
         return {
