@@ -25,6 +25,13 @@ class Commands():
         now = time.time()
         last_used = self.account.cooldowns.get(command_name, 0)
         
+        if now - last_used < cooldown_seconds:
+            time_left = int(cooldown_seconds - (now - last_used))
+            return True, time_left
+        else:
+            self.account.cooldowns[command_name] = now
+            return False, 0
+        
     def beg(self):
         amount = random.randint(1, 100)
         self.account.wallet += amount
