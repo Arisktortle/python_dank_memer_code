@@ -41,7 +41,6 @@ class MainLoop:
             ("blackjack", "Play blackjack game")
         ]
         for cmd, description in commands:
-            print(f"   {cmd.ljust(16)} ---> {desc}")
+            print(f"   {cmd.ljust(16)} ---> {description}") # type: ignore
         print()
-    
             
