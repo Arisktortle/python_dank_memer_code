@@ -1,4 +1,5 @@
-from command_list import PrintCommands
+from command_list import Commands
+from dank_bank import Bank
 
 class StartProgram():
     
@@ -10,11 +11,17 @@ class StartProgram():
                 self.command = str(input("Enter a command: "))
                 
                 if self.command == "help":
-                    PrintCommands().show_commands()
-            
-            
+                    Commands().show_commands()
+                    
+                elif self.command == "balance":
+                    Bank().show_balance()
+                    
+                elif self.command == "beg":
+                    Commands().beg()
+                    
             except ValueError:
                 print("Invalid input, try again.")  
+                
                 
 start = StartProgram()
 start.start()
