@@ -1,4 +1,5 @@
 import random
+import time
 
 class Commands():
     def __init__(self, account):
@@ -19,10 +20,14 @@ class Commands():
         for cmd, description in commands:
             print(f"   {cmd.ljust(16)} - {description}") # type: ignore
         print()
-            
+        
+    def set_cooldown(self, command_name, cooldown_seconds):
+        now = time.time()
+        last_used = self.account.cooldowns.get(command_name, 0)
+        
     def beg(self):
         amount = random.randint(1, 100)
         self.account.wallet += amount
         donators = ["a kind stranger", "a wizard", "Elon Musk", "an NPC", "Sara Duterte", "a dog", "Gelo Cruz"]
         donor = random.choice(donators)
-        return f"{donor} gave you ${amount}..."
+        return f"\n{donor} gave you ${amount}...\n"

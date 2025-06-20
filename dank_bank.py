@@ -4,6 +4,7 @@ class Bank:
             self.wallet = data.get("wallet", 1000)
             self.bank= data.get("bank", 0)
             self.inventory = data.get("inventory", [])
+            self.cooldown = data.get("cooldowns", {})
         else:
             self.wallet = 1000
             self.bank = 0 
