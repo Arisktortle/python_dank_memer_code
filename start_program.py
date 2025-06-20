@@ -4,7 +4,8 @@ from dank_bank import Bank
 
 class StartProgram():
     def __init__(self):
-        self.user_data = UserData()
+        username = input("Enter your username: ").strip().lower()
+        self.user_data = UserData(username)
         self.account = self.user_data.load_data()
         self.commands = Commands(self.account)
         
