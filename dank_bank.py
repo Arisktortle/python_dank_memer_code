@@ -16,3 +16,21 @@ class Bank:
             "inventory": self.inventory
         }
         
+    def deposit(self, amount):
+        if amount <= 0:
+            return "Amount must be positive"
+        if self.wallet >= amount:
+            self.wallet -= amount
+            self.bank += amount
+            return f"Sucessfully deposited ${amount} to your bank."
+        return "Not enough balance in wallet."
+    
+    def withdraw(self, amount):
+        if amount <= 0:
+            return "Amount must be positive."
+        if self.bank >= amount:
+            self.bank -= amount
+            self.wallet += amount
+            return f"Successfully withdrawn ${amount} from your bank."
+        return "Not enough balance in bank."
+        
