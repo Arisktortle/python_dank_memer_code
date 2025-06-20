@@ -16,16 +16,21 @@ class StartProgram():
                 command = (input("Enter a command: "))
                 
                 if command == "help":
-                    Commands().show_commands()
+                    self.commands.show_commands()
                     
                 elif command == "balance":
-                    Bank().show_balance()
+                    print(self.account.show_balance())
                     
                 elif command == "beg":
-                    Commands().beg()
+                    print(self.commands.beg())
+                    
+                elif command == "exit":
+                    self.user_data.save(self.account)
+                    print("Game saved. Thank you for using the program!")
+                    break
                     
             except ValueError:
-                print("Invalid input, try again.")  
+                print("Invalid command, type 'help' for list of commands.")
                 
 start = StartProgram()
 start.start()
