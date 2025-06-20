@@ -33,6 +33,10 @@ class Commands():
             return False, 0
         
     def beg(self):
+        cooldown_active, seconds_left = self.set_cooldown("beg", 30)
+        if cooldown_active:
+            return f"This command has a cooldown, try again in {seconds_left} seconds."
+        
         amount = random.randint(1, 100)
         self.account.wallet += amount
         donators = ["a kind stranger", "a wizard", "Elon Musk", "an NPC", "Sara Duterte", "a dog", "Gelo Cruz"]
