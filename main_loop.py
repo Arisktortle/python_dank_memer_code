@@ -1,3 +1,6 @@
+import json
+import os
+
 class MainLoop:
     def __init__(self, data_file="data.json"):
         self.user  = None
@@ -15,4 +18,14 @@ class MainLoop:
             
             except ValueError:
                 print("Invalid input, try again.")  
+                
+    def save_data(self):
+        with open(self.data_file, 'w') as f:
+            json.dump(self.user_data, f, indent=4)
+            
+    def load_data(self):
+        if os.path.exists(self.data_file):
+            with open(self.data_file, 'r') as f:
+                return json.load(f)
+    
             
