@@ -20,9 +20,9 @@ class Commands():
                 print(f"   {cmd.ljust(16)} - {description}") # type: ignore
             print()
             
-        def beg(self):
-            amount = random.randint(1, 100)
-            self.account.wallet += amount
-            donators = ["a kind stranger", "a wizard", "Elon Musk", "an NPC", "Sara Duterte", "a dog", "Gelo Cruz"]
-            donor = random.choice(donators)
-            return f"{donor} gave you ${amount}..."
+    def beg(self):
+        amount = random.randint(1, 100)
+        self.account.wallet += amount
+        donators = ["a kind stranger", "a wizard", "Elon Musk", "an NPC", "Sara Duterte", "a dog", "Gelo Cruz"]
+        donor = random.choice(donators)
+        return f"{donor} gave you ${amount}..."
