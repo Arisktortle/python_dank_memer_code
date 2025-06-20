@@ -33,4 +33,6 @@ class Bank:
             self.wallet += amount
             return f"Successfully withdrawn ${amount} from your bank."
         return "Not enough balance in bank."
-        
+    
+    def show_balance(self):
+        return f"Wallet: ${self.wallet} | Bank: ${self.bank}"
