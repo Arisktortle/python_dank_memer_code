@@ -4,7 +4,7 @@ class Bank:
             self.wallet = data.get("wallet", 1000)
             self.bank= data.get("bank", 0)
             self.inventory = data.get("inventory", [])
-            self.cooldown = data.get("cooldowns", {})
+            self.cooldowns = data.get("cooldowns", {})
         else:
             self.wallet = 1000
             self.bank = 0 
@@ -14,7 +14,8 @@ class Bank:
         return {
             "wallet": self.wallet,
             "bank": self.bank,
-            "inventory": self.inventory
+            "inventory": self.inventory,
+            "cooldowns": self.cooldowns
         }
         
     def deposit(self, amount):
