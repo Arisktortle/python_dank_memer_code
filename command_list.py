@@ -22,14 +22,14 @@ class Commands():
         print()
         
     def set_cooldown(self, command_name, cooldown_seconds):
-        now = time.time()
+        current_time = time.time()
         last_used = self.account.cooldowns.get(command_name, 0)
         
-        if now - last_used < cooldown_seconds:
-            time_left = int(cooldown_seconds - (now - last_used))
+        if current_time - last_used < cooldown_seconds:
+            time_left = int(cooldown_seconds - (current_time - last_used))
             return True, time_left
         else:
-            self.account.cooldowns[command_name] = now
+            self.account.cooldowns[command_name] = current_time
             return False, 0
         
     def beg(self):
