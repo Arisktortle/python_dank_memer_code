@@ -1,6 +1,6 @@
 import random
 
-class BlackjackGame:
+class PlayerHand:
     def __init__(self):
         self.hand = []
         
@@ -13,3 +13,8 @@ class BlackjackGame:
     
     def show(self):
         print(f"Total cards: {self.total_cards()}")
+        
+class BlackJackLogic:
+    def __init__(self):
+ 
+    
