@@ -10,7 +10,7 @@ class StartProgram():
         self.commands = Commands(self.account)
         
     def start(self):
-        print("Welcome to Dank Memer Python Edition!\nType \"help\" for list of commands. \n")
+        print("\nWelcome to Dank Memer Python Edition!\nType \"help\" for list of commands. \n")
 
         while True:
             try:
