@@ -24,5 +24,19 @@ class BlackJackLogic:
             self.player.draw()
             self.dealer.draw()
             
+        self.player.show()
+        
+        while self.player.total() <= 21:
+            user_move = input("hit or stand?: ").lower()
+            if user_move == "hit":
+                self.player.draw()
+                self.player.show()
+            else:
+                break
+            
+        
+            
+            
+                
  
     
