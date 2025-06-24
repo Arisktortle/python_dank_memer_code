@@ -16,5 +16,13 @@ class PlayerHand:
         
 class BlackJackLogic:
     def __init__(self):
+        self.dealer = PlayerHand()
+        self.player = PlayerHand()
+        
+    def play(self):
+        for draw_count in range(2):
+            self.player.draw()
+            self.dealer.draw()
+            
  
     
