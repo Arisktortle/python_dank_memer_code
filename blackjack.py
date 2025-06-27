@@ -51,6 +51,13 @@ class BlackJackLogic:
         print(f"You:    {len(self.player.hand)} cards | Total: {player_total}")
         print(f"Dealer: {len(self.dealer.hand)} cards | Total: {dealer_total}")
         
+        if dealer_total > 21 or player_total > dealer_total:
+            print("You win!")
+        elif player_total == dealer_total:
+            print("Tie!")
+        else:
+            print("Dealer wins.")
+        
             
             
                 
