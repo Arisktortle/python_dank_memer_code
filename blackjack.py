@@ -43,6 +43,13 @@ class BlackJackLogic:
         while self.dealer.total() < 17:
             self.dealer.draw()
             self.dealer.show()
+            
+    def show_result(self):
+        player_total = self.player.total()
+        dealer_total = self.dealer.total()
+        print("\n--- Final ---")
+        print(f"You:    {len(self.player.hand)} cards | Total: {player_total}")
+        print(f"Dealer: {len(self.dealer.hand)} cards | Total: {dealer_total}")
         
             
             
