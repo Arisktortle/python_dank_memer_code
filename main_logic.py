@@ -31,6 +31,14 @@ class StartProgram():
                     print("Game saved. Thank you for using the program!")
                     break
                 
+                elif command.startswith("bank deposit"):
+                    try:
+                        amount = int(command.split()[2])
+                        print(self.commands.deposit(amount))
+                        self.user_data.save(self.account)
+                    except:
+                        print("Usage: bank deposit AMOUNT")
+
                 elif command == "blackjack":
                     self.commands.blackjack()
                     self.user_data.save(self.account)
