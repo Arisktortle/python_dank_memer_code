@@ -35,6 +35,9 @@ class BlackJackLogic:
             print("Invalid amount.")
             return
         
+        self.bank.wallet -= self.bet
+        print(f"Bet of ${self.bet} placed.")
+        
         for draw_count in range(2):
             self.player.draw_card()
             self.dealer.draw_card()
