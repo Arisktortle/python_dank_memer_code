@@ -39,6 +39,14 @@ class StartProgram():
                     except:
                         print("Usage: bank deposit AMOUNT")
 
+                elif command.startswith("bank withdraw"):
+                    try:
+                        amount = int(command.split()[2])
+                        print(self.commands.withdraw(amount))
+                        self.user_data.save(self.account)
+                    except:
+                        print("Usage: bank withdraw AMOUNT")
+                        
                 elif command == "blackjack":
                     self.commands.blackjack()
                     self.user_data.save(self.account)
