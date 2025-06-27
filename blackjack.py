@@ -34,6 +34,15 @@ class BlackJackLogic:
             else:
                 break
             
+        if self.playertotal() > 21:
+            print("Busted. The dealer wins.")
+            return
+            
+        print("\nDealer's turn:")
+        self.dealer.show()
+        while self.dealer.total() < 17:
+            self.dealer.draw()
+            self.dealer.show()
         
             
             
