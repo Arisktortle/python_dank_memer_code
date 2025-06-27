@@ -22,6 +22,19 @@ class BlackJackLogic:
         self.bet = 0
         
     def play(self):
+        print(f"\n User Balance: ${self.bank.wallet}")
+        try:
+            self.bet = int(input("Enter your bet: "))
+            if self.bet <= 0:
+                print("Invalid value, must be more than 0.")
+                return
+            if self.bet > self.bank.wallet:
+                print("Not enough money in your wallet.")
+                return
+        except ValueError:
+            print("Invalid amount.")
+            return
+        
         for draw_count in range(2):
             self.player.draw_card()
             self.dealer.draw_card()
