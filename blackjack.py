@@ -21,8 +21,8 @@ class BlackJackLogic:
         
     def play(self):
         for draw_count in range(2):
-            self.player.draw()
-            self.dealer.draw()
+            self.player.draw_card()
+            self.dealer.draw_card()
             
         self.player.show()
         
