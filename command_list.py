@@ -1,3 +1,4 @@
+from blackjack import BlackJackLogic
 import random
 import time
 
@@ -42,3 +43,7 @@ class Commands():
         donators = ["a kind stranger", "a wizard", "Elon Musk", "an NPC", "Sara Duterte", "a dog", "Gelo Cruz"]
         donor = random.choice(donators)
         return f"\n{donor} gave you ${amount}...\n"
+    
+    def blackjack(self):
+        game = BlackJackLogic(self.account)
+        game.play()
