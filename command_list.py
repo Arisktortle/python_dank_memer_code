@@ -18,6 +18,8 @@ class Commands():
             ("bank deposit AMOUNT", "Deposit amount of money"),
             ("bank withdraw AMOUNT", "Withdraw amount of money"),
             ("blackjack", "Play blackjack game"),
+            ("bank deposit AMOUNT", "Deposit amount of money"),
+            ("bank withdraw AMOUNT", "Withdraw amount of money")
         ]
         for cmd, description in commands:
             print(f"   {cmd.ljust(16)} - {description}") # type: ignore
