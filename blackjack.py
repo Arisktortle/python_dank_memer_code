@@ -22,9 +22,9 @@ class BlackJackLogic:
         self.bet = 0
         
     def play(self):
-        print(f"\n User Balance: ${self.bank.wallet}")
+        print(f"\nUser Balance: ${self.bank.wallet}")
         try:
-            self.bet = int(input("Enter your bet: "))
+            self.bet = int(input("\nEnter your bet: "))
             if self.bet <= 0:
                 print("Invalid value, must be more than 0.")
                 return
@@ -79,9 +79,3 @@ class BlackJackLogic:
             self.bank.wallet += self.bet
         else:
             print("Dealer wins.")
-        
-            
-            
-                
- 
-    
