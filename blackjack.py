@@ -73,8 +73,10 @@ class BlackJackLogic:
         
         if dealer_total > 21 or player_total > dealer_total:
             print("You win!")
+            self.bank.wallet += self.bet * 2
         elif player_total == dealer_total:
             print("Tie!")
+            self.bank.wallet += self.bet
         else:
             print("Dealer wins.")
         
