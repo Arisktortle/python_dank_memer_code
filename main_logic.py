@@ -30,6 +30,10 @@ class StartProgram():
                     self.user_data.save(self.account)
                     print("Game saved. Thank you for using the program!")
                     break
+                
+                elif command == "blackjack":
+                    self.commands.blackjack()
+                    self.user_data.save(self.account)
                     
             except ValueError:
                 print("Invalid command, type 'help' for list of commands.")
