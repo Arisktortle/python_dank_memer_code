@@ -15,9 +15,11 @@ class PlayerHand:
         print(f"Total cards: {self.total_cards()}")
         
 class BlackJackLogic:
-    def __init__(self):
+    def __init__(self, bank_account):
         self.dealer = PlayerHand()
         self.player = PlayerHand()
+        self.bank = bank_account
+        self.bet = 0
         
     def play(self):
         for draw_count in range(2):
