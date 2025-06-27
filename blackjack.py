@@ -29,7 +29,7 @@ class BlackJackLogic:
         while self.player.total_cards() <= 21:
             user_move = input("hit or stand?: ").lower()
             if user_move == "hit":
-                self.player.draw()
+                self.player.draw_card()
                 self.player.show()
             else:
                 break
