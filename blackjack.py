@@ -26,7 +26,7 @@ class BlackJackLogic:
             
         self.player.show()
         
-        while self.player.total() <= 21:
+        while self.player.total_cards() <= 21:
             user_move = input("hit or stand?: ").lower()
             if user_move == "hit":
                 self.player.draw()
@@ -34,7 +34,7 @@ class BlackJackLogic:
             else:
                 break
             
-        if self.playertotal() > 21:
+        if self.player.total_cards() > 21:
             print("Busted. The dealer wins.")
             return
             
