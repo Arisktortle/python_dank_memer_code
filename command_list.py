@@ -1,4 +1,5 @@
 from blackjack import BlackJackLogic
+from dank_bank import Bank
 import random
 import time
 
@@ -47,3 +48,9 @@ class Commands():
     def blackjack(self):
         game = BlackJackLogic(self.account)
         game.play()
+        
+    def deposit(self, amount: int):
+        return self.account.deposit(amount)
+    
+    def withdraw(self, amount: int):
+        return self.account.withdraw(amount)
